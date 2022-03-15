@@ -1,0 +1,51 @@
+<!-- <mat-sidenav #rightSidenav mode="side" class="rightSidenav" [fixedInViewport]="true" [fixedTopGap]="65"> -->
+<!-- <mat-sidenav-container class="example-container" (backdropClick)="close('backdrop')"> -->
+<mat-sidenav #rightSidenav mode="push" class="rightSidenav">
+    <div class="sidenav-logo">
+        <img src="../../../assets/images/diLogo.png" border="0" height="100px" width="100px" alt="image">
+    </div>
+    <mat-nav-list class="list">
+        <a mat-list-item routerLink="/co-dashboard" routerLinkActive='selected' [routerLinkActiveOptions]='{exact:true}'>
+            <mat-icon>dashboard</mat-icon>&nbsp;CO Dashboard
+        </a>
+        <a mat-list-item routerLink="/co-dashboard" routerLinkActive='selected' *ngIf="role == '1'" [routerLinkActiveOptions]='{exact:true}'>
+            <mat-icon>dashboard</mat-icon>&nbsp;CO Dashboard
+        </a>
+        <a mat-list-item routerLink="/coplan-listing" routerLinkActive='selected' *ngIf="role == '5'" [routerLinkActiveOptions]='{exact:true}'>
+            <mat-icon>system_update_alt</mat-icon>&nbsp;CO Plan
+        </a>
+        <a mat-list-item routerLink="/aidashboard" routerLinkActive='selected' *ngIf="role == '2'" [routerLinkActiveOptions]='{exact:true}'>
+            <mat-icon>local_activity</mat-icon>&nbsp; CO Activity Recognition
+        </a>
+        <a mat-list-item routerLink="/covid-measures-dashboard" routerLinkActive='selected' *ngIf="role == '1'" [routerLinkActiveOptions]='{exact:true}'>
+            <mat-icon>accessibility_new</mat-icon>&nbsp; COVID-19 Measures
+        </a>
+        <!-- <a mat-list-item routerLink="/safety-dashboard" routerLinkActive='selected' *ngIf="role == '1'"
+      [routerLinkActiveOptions]='{exact:true}' >
+      <mat-icon>accessibility_new</mat-icon>&nbsp; Safety Dashboard
+    </a> -->
+        <a mat-list-item href="http://18.217.82.193:8000/Production/public/demo.html" *ngIf="role == '1'">
+            <img class="avatar" src="../../../assets/images/output-onlinepngtools.png" alt=""> &nbsp; Safety Dashboard
+        </a>
+        <a mat-list-item routerLink="/coplan-listing-dashboard" routerLinkActive='selected' *ngIf="role == '1'" [routerLinkActiveOptions]='{exact:true}'>
+            <mat-icon>view_list</mat-icon>&nbsp; CO Listing
+        </a>
+        <!-- <a mat-list-item [matMenuTriggerFor]="menu" #menuTrigger="matMenuTrigger" (mouseover)="menuTrigger.openMenu()" (menuOpened)="toggleIcon.class = toggleIcon.class==='fa fa-angle-right' ? 'fa fa-angle-down':'fa fa-angle-right'" (menuClosed)="toggleIcon.class = toggleIcon.class==='fa fa-angle-right' ? 'fa fa-angle-down':'fa fa-angle-right'"
+            [hidden]="role == '2'">
+            <mat-icon>cached</mat-icon>&nbsp; CO Processor <i #toggleIcon class="{{toggleIcon.class==='fa fa-angle-right' ? 'fa fa-angle-down':'fa fa-angle-right'}} ml-3"></i>
+        </a>
+        <mat-menu #menu="matMenu" [overlapTrigger]="false" yPosition="below" class="nested-menu-css">
+            <span (mouseleave)="menuTrigger.closeMenu()">
+            <button mat-menu-item  *ngIf="role == '1'"  routerLink="/co-processor-dashboard" [queryParams]="{line:1}" routerLinkActive='selected'  [routerLinkActiveOptions]='{exact:true}'>
+              <mat-icon>swap_vertical_circle</mat-icon>
+              <span>Line 1</span>
+            </button>
+            <button mat-menu-item routerLink="/co-processor-dashboard" [queryParams]="{line:11}" routerLinkActive='selected' *ngIf="role == '1'" [routerLinkActiveOptions]='{exact:true}'>
+              <mat-icon>swap_vertical_circle</mat-icon>
+              <span>Line 11</span>
+            </button>
+            </span>
+        </mat-menu> -->
+    </mat-nav-list>
+</mat-sidenav>
+<!-- </mat-sidenav-container> -->

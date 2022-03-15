@@ -1,0 +1,43 @@
+.rightSidenav {
+    // background-color: #3f51b5;
+    background-color: #ffffff;
+    top: 50px;
+    // width: 210px;
+    // padding: 40px 33px 40px 36px;
+    // border: 1px solid #fafafa;
+    // border-top: 1px solid #e8e8e8;
+    // box-shadow: -5px 7px 12px rgba(0, 0, 0, 0.1);
+    // // right: 0;
+    // z-index: 999;
+}
+
+.black-color {
+    color: black !important;
+}
+
+.avatar {
+    vertical-align: middle;
+    width: 22px;
+    height: 25px;
+    border-radius: 10%;
+}
+
+.sidenav-logo {
+    border: 1px solid #f1f2f7;
+    padding: 20px 17px 20px 45px;
+}
+
+button:focus {
+    outline: 5px auto #fff !important;
+}
+
+.font-15 {
+    font-size: 15px !important;
+}
+
+.mat-menu-item-highlighted:not([disabled]),
+.mat-menu-item.cdk-keyboard-focused:not([disabled]),
+.mat-menu-item.cdk-program-focused:not([disabled]),
+.mat-menu-item:hover:not([disabled]) {
+    background: #dedbdb !important;
+}

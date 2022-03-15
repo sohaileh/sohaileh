@@ -1,0 +1,77 @@
+<div class="container-flex">
+    <mat-toolbar class="nav p-0" style="height: 50px;background: #fff;">
+        <div class="col-lg-12 mt-2 no-gutters" style="Display:flex">
+            <div class="col-lg-4">
+                <i class="fa fa-bars fa-fw font-30 mr-1 showCursor" title="Sidenav Bar" aria-hidden="true" [class.active]="toggleActive" (click)="toggleRightSidenav()"></i>
+                <!-- <a href="http://18.217.82.193:8000/list.html"><i class="fa fa-home white-color font-30 mr-1 showCursor" title="go to home"></i></a> -->
+                <span>{{appName ? appName : 'Not-Set'}}</span>
+            </div>
+            <div class="col-lg-4 text-center">
+                <span class="mt-2">Independence Factory</span>
+            </div>
+            <div class="col-lg-4">
+                <span class="pull-right">
+                <!-- <i class="btn fa fa-search search-icon-css mr-1 showCursor"  tooltip="Select Change Over" [hidden]="is_checked" (click)="openSearchModel()"></i> -->
+                    <!-- <a href="http://18.217.82.193:8000/list.html"><i class="fa fa-home white-color font-30 showCursor" title="go to home"></i></a> -->
+               <!-- <img src="../../../assets/images/profile-img.jpg" class="avatar" alt="profileImage"> -->
+                    <span class="btn profile-nav-dot"><span
+                class="m--2 font-15">{{ loggedInUser['firstname'] ? loggedInUser['firstname'] : ''}}{{loggedInUser['lastname'] ? loggedInUser['lastname'] : ''}}</span>
+                </span>
+                <span>
+                    <mat-icon class="showCursor" [matMenuTriggerFor]="afterMenu">expand_more</mat-icon>
+                    <mat-menu #afterMenu="matMenu" class="drop-down-mt-15" xPosition="before">
+                        <button mat-menu-item routerLink="/change-password">
+                    <mat-icon class="mr-1">update</mat-icon>Change Password
+                  </button>
+                        <button mat-menu-item (click)="logout();">
+                <mat-icon class="mr-1">power_settings_new</mat-icon>Logout
+              </button>
+          </mat-menu>
+                  </span>
+
+                </span>
+                <!-- <img src="../../../assets/a4.jpg" class="avatar pull-right show-cursor" title="loggedIn User" alt="profile"> -->
+            </div>
+
+
+
+        </div>
+        <!-- The overlay -->
+
+    </mat-toolbar>
+
+
+    <!-- ################# -->
+    <!-- <mat-toolbar color="primary" class="nav" style="height: 50px">
+        <mat-toolbar-row>
+            <div fxFlex="25%">
+                <i class="fa fa-bars font-30 mr-2 menu-icon-css showCursor" aria-hidden="true" [class.active]="toggleActive" (click)="toggleRightSidenav()"></i>
+
+                <span>bTITON Changeover App</span>
+            </div>
+            <div fxFlex="25%"></div>
+            <h1 fxFlex="25%" fxLayout fxLayoutAlign="center">UL Independence Factory</h1>
+            <div fxFlex="25%">
+
+            </div>
+            <div fxFlex="25%" fxLayout fxLayoutAlign="end">
+                <span class="profile-nav-dot"><span
+            class="m-1 font-15">{{ loggedInUser['firstname'] ? loggedInUser['firstname'] : ''}}{{loggedInUser['lastname'] ? loggedInUser['lastname'] : ''}}</span>
+                </span>
+                <mat-icon class="showCursor mt-2" [matMenuTriggerFor]="afterMenu">expand_more</mat-icon>
+                <br>
+                <mat-menu #afterMenu="matMenu" xPosition="before">
+                    <button mat-menu-item>
+                <mat-icon class="mr-1">update</mat-icon>Change Password
+              </button>
+                    <button mat-menu-item (click)="logout();">
+            <mat-icon class="mr-1">power_settings_new</mat-icon>Logout
+          </button>
+
+                </mat-menu>
+            </div>
+        </mat-toolbar-row>
+    </mat-toolbar> -->
+
+
+</div>
